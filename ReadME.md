@@ -32,28 +32,50 @@ Driver-Ped/
 
 ## File Descriptions
 
-- **GeneratedVideos/**: This directory contains the HTMLs generated from the movement visualization notebooks.
+- **GeneratedVideos/**: This directory contains HTML files with visualizations of pedestrian scenarios.
+  
 - **RawData/**: This directory contains raw data files used in the analysis.
-- **body joints list.xlsx**: This Excel file contains the list of body joints used for analyzing pedestrian movements.
-- **Movement_Visualization_David.ipynb**: Jupyter notebook for visualizing pedestrian movement data, developed by David.
-- **Movement_Visualization_KK.ipynb**: Jupyter notebook for visualizing pedestrian movement data, developed by KK.
+  - **maps/**: Contains JPEG images of maps used in the analysis, more scenario-specific maps can be added later.
+    - **Ped-104.jpeg**: Map image related to pedestrian scenario 104.
+    - **Ped-105.jpeg**: Map image related to pedestrian scenario 105.
+    - **scene.jpeg**: General scene map image used for visualization.
+  - **Pilot2/**: Contains CSV files with raw data for the second pilot study.
+    - **csv/**: Directory holding CSV files related to the pilot study.
+
+- **body joints list.xlsx**: This Excel file contains the list of body joints used for visualizing pedestrian movements.
+
+- **Movement_Visualization_David.ipynb**: Jupyter notebook for visualizing pedestrian movement data and generating 2D.mp4 videos, developed by David.
+
+- **Movement_Visualization_KK.ipynb**: Jupyter notebook for visualizing pedestrian movement data and generating interactive 2D and 3D .html files, developed by KK.
+
 - **ReadME.md**: This file, providing an overview of the project and the directory structure.
+
 
 ## Installation and Setup
 
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   gh repo clone kzhuoxu/Driver_Ped_Interaction_Analysis
    ```
 
-2. Navigate to the project directory:
+2. Download the data from this [Google Drive Link](https://drive.google.com/drive/folders/1yDvWvUWWHHmzT-3ZMJ18PT8RVv8kOYWc?usp=drive_link) and put the data in this directory.
+   ```
+   Driver-Ped/
+   │
+   ├── RawData/
+   │   └── Pilot2/
+   │       └── csv/
+   ```
+   
+
+3. Navigate to the project directory:
 
    ```bash
    cd Driver-Ped
    ```
 
-3. Install the required dependencies:
+4. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -62,8 +84,12 @@ Driver-Ped/
 
 1. **Data Preparation**: Ensure that the raw data is placed in the `RawData/` directory.
 2. **Running Notebooks**: Open the Jupyter notebooks (`Movement_Visualization_David.ipynb` and `Movement_Visualization_KK.ipynb`) in Jupyter Lab or Jupyter Notebook.
-3. **Visualization**: Execute the cells in the notebooks to generate visualizations of the pedestrian movement data.
-
+3. **Visualization**: Execute the cells in the notebook `Movement_Visualization_KK.ipynb` to generate visualizations of the pedestrian movement data.
+   - Driver-Ped 2D Animation: This section includes cells for generating 2D animations that illustrate the interaction between drivers and pedestrians.
+   - Driver A: 3D Close-up Animation: This part of the notebook generates close-up 3D animations of Driver A, focusing on detailed movements and interactions.
+   - Pedestrian B: 3D Close-up Animation: Similar to the Driver A section, this part generates close-up 3D animations of Pedestrian B, highlighting specific movements.
+   - Run: This section contains the code to execute the full set of animations and visualizations. Running this will produce all the visual outputs as specified in the previous sections.
+   - Testing: This section includes cells for testing the animations and visualizations before incorporating them into the "Run" section, to ensure they are correctly generated and aligned with the expected outcomes.
 ## Results
 
 The results of the analysis are visualized in the form of plots and videos. These visualizations can be found in the `GeneratedVideos/` directory.
@@ -85,7 +111,5 @@ We would like to thank all the contributors and data providers for their support
 
 For any queries or issues, please contact:
 
-- David: [email@example.com](mailto:email@example.com)
-- KK: [email@example.com](mailto:email@example.com)
+- KK: [zx325@cornell.edu](mailto:zx325@cornell.edu)
 
-![File Directory Screenshot](file-kAdUXwXddLQMvSjbjqizLk2k)
